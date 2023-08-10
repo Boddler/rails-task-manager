@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Edit Task</h1>
+  <%= render 'tasks/form' %>
+
+<br>
+<%= link_to "Home", tasks_path, class: "btn btn-dark"  %>
+<%= link_to "Delete", task_path(@task), class: "btn btn-dark", data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }  %>
+</div>

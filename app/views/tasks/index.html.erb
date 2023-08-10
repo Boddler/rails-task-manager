@@ -1,0 +1,18 @@
+<h1>My Tasks</h1>
+
+
+
+<% @tasks.each do |task| %>
+<% if task.completed?%>
+<li><i class="fa-solid fa-square"></i><%= link_to "#{task.title}", task_path(task), class: "btn btn-warning" %> <%= link_to "🚮", task_path(task), class: "btn btn-primary", data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }  %>  </li>
+<% else %>
+<li><i class="fa-regular fa-square"></i><%= link_to "#{task.title}", task_path(task), class: "btn btn-warning" %> <%= link_to "🚮", task_path(task), class: "btn btn-primary", data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }  %> </li>
+<% end %>
+<% end %>
+
+<%= link_to "Add a new task", new_task_path, class: "btn btn-info" %>
+<%# <% raise %>
+
+
+  <%# <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br> %>
