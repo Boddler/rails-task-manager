@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ .holder {
+  border-radius: 5px;
+  border: solid;
+  /* display: flex; */
+  padding: 8px;
+  margin-top: 8px;
+ }
